@@ -7,6 +7,7 @@ import java.util.Random;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.fasterxml.jackson.databind.JsonNode;
 import com.logesh.model.MultiplicationGenerator;
 import com.logesh.repository.MultiplicationGeneratorRepository;
 
@@ -29,5 +30,10 @@ public class MultiplicationGeneratorServiceImpl {
 		List<MultiplicationGenerator> tasks = new ArrayList<>();
 		repo.findAll().forEach(tasks::add);
 		return tasks;
+	}
+
+	public void saveUserResponse(JsonNode obj) {
+		// TODO Auto-generated method stub
+		
 	}
 }

@@ -33,6 +33,7 @@ public class MultiplicationController {
 	@PostMapping("/postResponse")
 	public String getUserResponse(@RequestBody JsonNode obj) {
 		System.out.println("received objet : " + obj.get("users.userName").toString());
+		svc.saveUserResponse(obj);
 		return "Got it";
 	}
 }
